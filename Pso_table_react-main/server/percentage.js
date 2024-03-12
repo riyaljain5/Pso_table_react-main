@@ -1,12 +1,20 @@
-// PercentageModel.js
 const mongoose = require('mongoose');
 
 const percentageSchema = new mongoose.Schema({
-    co: String,
-    percentage_po: [Number],
-    percentage_pso: [Number],
+  co: {
+    type: String,
+    required: true,
+  },
+  percentage_po: {
+    type: [Number],
+    default: [],
+  },
+  percentage_pso: {
+    type: [Number],
+    default: [],
+  },
 });
 
-const PercentageModel = mongoose.model('Percentage', percentageSchema);
+const PercentageModel = mongoose.model('PercentageModel', percentageSchema);
 
 module.exports = PercentageModel;
