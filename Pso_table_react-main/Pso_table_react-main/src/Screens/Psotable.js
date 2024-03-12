@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import PsoRow from "../components/PsoRow";
-import PercentageTable from "./map";  // Assuming the correct path
+import PercentageTable from "./percentage";  // Assuming the correct path
 
 const PsoTable = () => {
   const [data, setData] = useState([]);
