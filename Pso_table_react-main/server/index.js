@@ -12,8 +12,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(bodyParser.json());
+
 app.use('/', router);
 app.use('/route', route);
+app.use('/', require('./routes/authRoutes'))
 
 mongoose
   .connect('mongodb://127.0.0.1:27017/project')
